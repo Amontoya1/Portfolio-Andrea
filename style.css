@@ -20,7 +20,7 @@ body{
 	margin:auto;
 }
 header{
-	position: absolute;
+	position: fixed;
 	width:100%;
 	left:0;
 	top:0;
@@ -28,10 +28,6 @@ header{
 	z-index:100;
 }
 
-@keyframes header{
-	0%{transform: translateY(-100%);opacity:0}
-	100%{transform: translateY(0%)}
-}
 header .logo{
 	float: left;
 }
@@ -44,7 +40,7 @@ header .logo a{
 	letter-spacing:2px;
 }
 header .logo a span{
-	color:#da9a10;
+	color:#e07c09;
 }
 header .navbar{
 	float: right;
@@ -71,11 +67,11 @@ header .navbar ul li a::before{
 	position: absolute;
 	top:100%;
 	margin-top:-5px;
-   height: 2px;
-   left:0px;
-   background-color: #8f113b;
-  width:0;
-  transition:width .5s ease;
+    height: 2px;
+    left:0px;
+    background-color: #1f0d13;
+    width:0;
+    transition:width .5s ease;
 }
 header .navbar ul li a.active::before{
 	width:100%;
@@ -84,25 +80,25 @@ header .navbar ul li a:hover::before{
 	width: 100%;
 }
 .home{
-	min-height: 100vh;
+	min-height: 80vh;
 	background-image: url("images/home-bg.jpg");
 	background-size: cover;
 	background-position: center ;
 	float: center;
 	width: 100%;
-	padding:0px 15px;
+	padding: 0px 15px;
 	position: relative;
 }
 
 .home::before{
-	content: '';
+	content: '0';
 	position: absolute;
 	left:0;
 	top:0;
 	height: 100%;
 	width: 100%;
 	z-index: 1;
-	background-color: #000000;
+	background-color: #534f57;
 	opacity: 0.7;
 }
 
@@ -148,15 +144,15 @@ header .navbar ul li a:hover::before{
 }
 
 h2.title{
-  font-size:30px;
-  font-weight: 600;
-  margin:0;
-  padding-bottom:70px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #cf5821;
- position: relative;
- letter-spacing:.5px;
+    font-size:30px;
+	font-weight: 600;
+	margin:0;
+    padding-bottom:70px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #cf5821;
+    position: relative;
+    letter-spacing:.5px;
 }
 h2.title::before{
 	content: '';
@@ -241,8 +237,8 @@ background-color:transparent;
 }
 
 .servicios .servicios-content{
- width: 100%;
- float: left;
+    width: 100%;
+    float: left;
 }
 
 .servicios .servicios-content .card{
@@ -387,7 +383,7 @@ background-color:transparent;
 }
 .contact .contact-content input:focus,
 .contact .contact-content textarea:focus{
- border-color:#f3971b;
+    border-color:#f3971b;
 }
 .contact .contact-content textarea{
 	height: 100px;
@@ -396,7 +392,6 @@ background-color:transparent;
 	display: block;
 	margin:auto;
 }
-
 
 footer{
 	float: left;
@@ -464,7 +459,7 @@ footer .footer-content .box h4{
 	padding:20px 0 0px;
 }
 footer .footer-content .box p{
-   color:#c2c0c3;
+    color:#c2c0c3;
 	font-size: 16px;
 	line-height: 25px;
 	letter-spacing:.5px;	
@@ -473,81 +468,46 @@ footer .footer-content .box p{
 	margin:0px;	
 }
 
-.trigger-main{
-	position: absolute;
-	top:15px;
-	right:0px;
-	display: none;
-}
-.trigger-main a{
-	display: inline-block;
-	position: relative;
-	z-index: 210;
-}
-.trigger-main a span{
-	display: block;
-	height: 2px;
-	width: 30px;
-	background-color: #ffffff;
-	margin-bottom:8px;
-	transition: transform .5s ease;
-	-webkit-transition: transform .5s ease;
-}
-.trigger-main a span:nth-child(1){
-   transform-origin: left top;
-}
-.trigger-main a span:nth-child(2){
-transform-origin: left bottom;
-}
-.trigger-main a.active span:nth-child(1){
-    -webkit-transform: rotate(45deg) translateY(-7px);
-	transform: rotate(45deg) translateY(-7px);
-}
-.trigger-main a.active span:nth-child(2){
-	-webkit-transform: rotate(-45deg) translateY(7px);
-	transform: rotate(-45deg) translateY(7px);
-}
+
 /*Responsive*/
 
 @media(max-width: 991px){
-	.trigger-main{
-		display: block;
-	}
+	
 	header .container{
 		position: relative;
 	}
     .container{
-    	max-width: 750px;
+	max-width: 750px;
     }
     .servicios .servicios-content .card .box h3{
-    	min-height:50px;
+	min-height:50px;
     }
 
     header{
-    	position: fixed;
-    	background-color: #222222;
+    position: fixed;
+    background-color: #222222;
     }
 
     header .navbar{
-    	position: fixed;
-    	top:0;
-    	right:0;
-    	bottom:0;
-    	width:180px;
-    	background-color: #222222;
-    	z-index:200;
-    	padding-top:80px;
-    	-webkit-transform: translateX(100%);
-    	transform: translateX(100%);
-    	transition: transform .5s ease;
-    	-webkit-transition: -webkit-transform .5s ease;
+    position: fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    width:180px;
+    background-color: #222222;
+    z-index:200;
+    padding-top:80px;
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    transition: transform .5s ease;
+    -webkit-transition: -webkit-transform .5s ease;
     }
     header .navbar.open{
-    	-webkit-transform: translateX(0);
-    	transform: translateX(0);
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
     }
     header .navbar ul li{
-    	display: block;
+    display: block;
     }
 }
 

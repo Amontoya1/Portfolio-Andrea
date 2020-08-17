@@ -40,7 +40,7 @@
     <h2 class="title">Acerca de mim</h2>
     <div class="about-content">
     <div class="img">
-    <img src="images/about-me.jpg" alt="me">
+    <img src="assets/about-me.jpg" alt="me">
 	</div>
 
 	
@@ -58,7 +58,6 @@
 	</div>
 	</div>
     </section>
-  
     <section class="servicios" id="servicios">
     <div class="container">
     <h2 class="title">Serviços</h2>
@@ -66,7 +65,7 @@
     <div class="card">
     	<div class="box">
     	<div class="icon">
-    		<span class="fa fa-laptop"></span>
+    	<span class="fa fa-laptop"></span>
 	</div>
     <h3>Full Stack Desenvolvedora </h3>
     <p>Atualmente fazendo treinamento na área de Programação com a Startup Toti. Um alto nível de troca cultural de conhecimento</p>
@@ -105,42 +104,42 @@
     		 	  	  <div class="box">
     		 	  	  	  <h3>Familia</h3>
     		 	  	  	  <h4>"Mãe"</h4>
-    		 	  	  	  <img src="images/portfolio1.jpg" alt="portfolio"/>
+    		 	  	  	  <img src="assets/portfolio1.jpg" alt="portfolio"/>
     		 	  	  </div>
     		 	  </div>
     		 	  <div class="card">
     		 	  	  <div class="box">
     		 	  	  	  <h3>Educação</h3>
     		 	  	  	  <h4>Diplomas</h4>
-    		 	  	  	  <img src="images/portfolio2.jpg" alt="portfolio"/>
+    		 	  	  	  <img src="assets/portfolio2.jpg" alt="portfolio"/>
     		 	  	  </div>
     		 	  </div>
     		 	  <div class="card">
     		 	  	  <div class="box">
     		 	  	  	  <h3>Mulher que apoia Mulher</h3>
     		 	  	  	  <h4>Amigas</h4>
-    		 	  	  	  <img src="images/portfolio3.jpg" alt="portfolio"/>
+    		 	  	  	  <img src="assets/portfolio3.jpg" alt="portfolio"/>
     		 	  	  </div>
     		 	  </div>
     		 	  <div class="card">
     		 	  	  <div class="box">
     		 	  	  	  <h3>Atividade Atual</h3>
     		 	  	  	  <h4>Toter</h4>
-    		 	  	  	  <img src="images/portfolio4.JPG" alt="portfolio"/>
+    		 	  	  	  <img src="assets/portfolio4.JPG" alt="portfolio"/>
     		 	  	  </div>
     		 	  </div>
     		 	  <div class="card">
     		 	  	  <div class="box">
     		 	  	  	  <h3>Apaxionada</h3>
     		 	  	  	  <h4>Educação Infantil</h4>
-    		 	  	  	  <img src="images/portfolio5.jpg" alt="portfolio"/>
+    		 	  	  	  <img src="assets/portfolio5.jpg" alt="portfolio"/>
     		 	  	  </div>
     		 	  </div>
     		 	  <div class="card">
     		 	  	  <div class="box">
     		 	  	  	  <h3>Profission</h3>
     		 	  	  	  <h4>Pedagoga TICS</h4>
-    		 	  	  	  <img src="images/portfolio6.jpg" alt="portfolio"/>
+    		 	  	  	  <img src="assets/portfolio6.jpg" alt="portfolio"/>
     		 	  	  </div>
     		 	  </div>
     		 </div>
@@ -148,20 +147,33 @@
     </section>
 
 
-   <section class="contact" id="contact">
-   	 <div class="container">
-   	 	  <h2 class="title">Contact</h2>
-   	 	  <div class="contact-content">
-   	 	  	  <form>
-   	 	  	  	 <input type="text" placeholder="Nome"/>
-   	 	  	  	 <input type="text" placeholder="Email"/>
-   	 	  	  	 <input type="text" placeholder="Assunto"/>
-   	 	  	  	 <textarea placeholder="Messagem"></textarea>
-   	 	  	  	 <button class="btn-light">Enviar Messagem</button>
-   	 	  	  </form>
-   	 	  </div>
-   	 </div>
-   </section>
+	<section class="contact" id="contact">
+       	 <div class="container">
+       	 	  <h2 class="title">Contact</h2>
+       	 	  <div class="contact-content">
+       	 	      <form action="">
+
+                           <input id="nome" class="registro" type="text" name="nome" placeholder="Nome">
+                      
+                           <input id="telefone" class="registro" type="text" name="telefone" placeholder="Telefone">
+                            
+                           <input id="Email" class="registro" type="text" name="email" placeholder="Email">
+    		
+    			           <input type="text" name="subject" placeholder="Assunto a tratar" title="El assunto es requerido" required>
+    		
+    			           <textarea name="comments" cols="50" rows="5" placeholder="Comentario" title="Seu comentário não deve exceder 255 caracteres" data-pattern="^.{1,255}$" required></textarea>
+    		
+       	 	  	  	<button type="button" value="captura" onclick="captura()">Enviar Messagem</button>
+    			</form>
+    					<div id="resultados">
+    					</div>
+
+
+       	 	  </div>
+       	 </div>
+      </section>
+
+   
 
    <footer>
    	  <div class="container">
@@ -194,10 +206,11 @@
    	  	  	 	 <li><a href="https://www.linkedin.com/in/andrea-montoya-80a0471a8/" target= "black"  rel="noopener"> <span class="fa fa-linkedin"></span></a></li>
    	  	  	 	 <li><a href="https://www.instagram.com/andreajmontoya3/?hl=pt-br" target= "black"  rel="noopener"> <span class="fa fa-instagram"></span></a></li>
    	  	  	 </ul>
-   	  	  </div>
+			   </div>
    	  </div>
    </footer>
 
+   <script src="Js/script.js"></script>
 </body>
 <footer>
 	<p> Desenvolvido por Andrea Montoya 2020</p>
